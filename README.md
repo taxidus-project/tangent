@@ -1,22 +1,21 @@
 # Tangent
 
-A simple game engine made in lua, made to power Taxidus
+A simple modular game engine built in Lua that is designed to support cross-language bindings.
 
 ## Features
 
-- Behavior engine
-- Dialogue system
-- Combat system
+- Fully customizable
+- Platform agnostic
+- Modular and simple to implement
 
-## Requirements
+## Documentation
 
-- Lua
-- Luarocks
-
-## Local setup
-
-Something is going to be here later...
+- [Reference manual](https://github.com/Hkaar/tangent/tree/master/docs)
 
 ## Contribution guide
 
 Something is going to be here later...
+
+## Related projects
+
+- [Taxidus](https://github.com/Hkaar/Taxidus)
