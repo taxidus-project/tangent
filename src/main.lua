@@ -1,5 +1,9 @@
+package.path = package.path .. ";./src/?.lua"
+
+local playground = require("src.playground.main")
+
 local function main()
-	print("hello world!")
+	playground.playground()
 end
 
 main()
