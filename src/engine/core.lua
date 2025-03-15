@@ -1,15 +1,17 @@
+local config = require("src.config")
+
 local Engine = {}
 
 function Engine.version()
-    return "1.0.0"
+    return config.ENGINE_VERSION
 end
 
 function Engine.platform()
-    return "Lua:Local"
+    return config.ENGINE_PLATFORM
 end
 
 function Engine.vendor()
-    return "Trimedge"
+    return config.ENGINE_VENDOR
 end
 
 return Engine
