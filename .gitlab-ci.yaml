@@ -1,0 +1,11 @@
+stages:
+  - linting-analyze
+
+luacheck:
+  stage: linting-analyze
+  image: alpine
+  before_script:
+    - apk add --no-cache lua5.3 luarocks
+    - luarocks install luacheck
+  script:
+    - luacheck src
