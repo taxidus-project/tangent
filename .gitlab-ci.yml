@@ -3,9 +3,11 @@ stages:
 
 luacheck:
   stage: linting-analyze
-  image: alpine
+  image: alpine:latest
   before_script:
-    - apk add --no-cache lua5.3 luarocks
+    - apk add --no-cache lua5.3 luarocks5.3
+    - ln -s /usr/bin/luarocks-5.3 /usr/local/bin/luarocks
+    - export PATH="/usr/local/bin:$PATH"
     - luarocks install luacheck
   script:
     - luacheck src
