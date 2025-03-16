@@ -1,8 +1,15 @@
+local config = require("src.config")
+local utils = require("src.lib.utils")
+
 local Store = {
     data = {}
 }
 
 function Store.create(key, value)
+    if utils.length(Store.data) >= config.ENGINE_STORE_MAX_KEYS then
+        return false
+    end
+
     if not Store.data[key] then
         Store.data[key] = value
         return true

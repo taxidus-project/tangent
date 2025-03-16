@@ -2,7 +2,6 @@ require "os"
 
 --- Clear the console screen
 ---
---- @return nil
 local function clear_screen()
     if not os.execute("clear") then
         os.execute("cls")
@@ -43,21 +42,22 @@ local function str_split(src, seperator)
     return tokens
 end
 
---- Merge two tables into one unified array
+--- Merge multiple tables into a single unified table
 ---
---- @param t1 metatable
---- @param t2 metatable
----
---- @return metatable
-local function merge(t1, t2)
+--- @param ... table
+--- @return table|nil
+local function merge(...)
     local result = {}
+    local tables = { ... }
 
-    for k, v in pairs(t1) do
-        result[k] = v
-    end
+    for _, tbl in ipairs(tables) do
+        for k, v in pairs(tbl) do
+            if result[k] then
+                return nil
+            end
 
-    for k, v in pairs(t2) do
-        result[k] = v
+            result[k] = v
+        end
     end
 
     return result
@@ -65,7 +65,8 @@ end
 
 --- Get the amount of entries inside the given metatable
 ---
---- @param t any
+--- @param t table
+--- @return integer
 local function length(t)
     local count = 0
 
