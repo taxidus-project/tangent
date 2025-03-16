@@ -1,8 +1,10 @@
 # Tangent
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![GitLab License](https://img.shields.io/gitlab/license/67816600?style=flat-square&logo=apache&logoColor=%23E4682A&color=%234370b6)
+![GitLab Release](https://img.shields.io/gitlab/v/release/67816600?sort=semver&style=flat-square)
+![Maintenance](https://img.shields.io/maintenance/yes/2025?style=flat-square)
 
-A simple modular game engine built in Lua that is designed to support cross-language bindings.
+A modular cross platform game engine used for Taxidus
 
 ## Features
 
@@ -10,14 +12,6 @@ A simple modular game engine built in Lua that is designed to support cross-lang
 - Platform agnostic
 - Modular and simple to implement
 
-## Documentation
+## Resources
 
-- [Reference manual](https://github.com/Hkaar/tangent/tree/master/docs)
-
-## Contribution guide
-
-Something is going to be here later...
-
-## Related projects
-
-- [Taxidus](https://github.com/Hkaar/Taxidus)
+- [Documentation](https://gitlab.com/trimedge/taxidus-project/tangent/-/tree/master/docs)
